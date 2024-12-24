@@ -15,8 +15,8 @@ const App = () => {
       }
     };
 
-    fetchEmails();
-  }, []);
+    //fetchEmails();
+  //}, []);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -35,7 +35,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div >
       <nav className="navbar navbar-dark bg-primary">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
