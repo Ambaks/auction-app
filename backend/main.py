@@ -13,7 +13,7 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
 
 origins = [
-    '*'
+    "https://ambaks.github.io/auction-app"
 ]
 
 app.add_middleware(
@@ -31,7 +31,7 @@ class EmailModel(EmailBase):
     id: int
 
     class Config:
-        orm_mode=True
+        from_attributes=True
 
 
 

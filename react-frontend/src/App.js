@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import api from './api.js';
+import api from './api';
 
 const App = () => {
   const [emails, setEmails] = useState([]);
@@ -8,7 +8,7 @@ const App = () => {
   useEffect(() => {
     const fetchEmails = async () => {
       try {
-        const response = await api.get('./emails'); // Fetch emails
+        const response = await api.get('/emails'); // Fetch emails
         setEmails(response.data);
       } catch (error) {
         console.error('Error fetching emails:', error);
@@ -22,9 +22,9 @@ const App = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
-      await api.post('./emails', formData); // Submit email
+      await api.post('/emails', formData); // Submit email
       setFormData({ email: '' });
-      const response = await api.get('./emails'); // Refresh email list
+      const response = await api.get('/emails'); // Refresh email list
       setEmails(response.data);
     } catch (error) {
       console.error('Error submitting email:', error);
