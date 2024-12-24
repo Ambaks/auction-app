@@ -13,7 +13,8 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
 
 origins = [
-    "https://ambaks.github.io/auction-app"
+    "https://ambaks.github.io/auction-app",
+    "https://auction-app-1.onrender.com"
 ]
 
 app.add_middleware(
