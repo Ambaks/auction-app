@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'https://ambaks.github.io/auction-app'
+    baseURL: 'https://auction-app-1.onrender.com'
 });
 
 // Export axios instance
