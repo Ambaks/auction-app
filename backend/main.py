@@ -14,7 +14,7 @@ app = FastAPI()
 
 origins = [
     'http://localhost:3000',
-    'http://ambaks.github.io/auction-app'
+    'http://www.ambaks.github.io/auction-app'
 ]
 
 app.add_middleware(
